@@ -7,6 +7,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   position: relative;
 }
@@ -480,4 +485,112 @@ footer{
 }
 
 
+}
+
+/* Enhanced Styles from help of ai */
+/* Navbar Hover */
+#menu li a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+#menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #51a995;
+  transition: width 0.3s ease;
+}
+#menu li a:hover {
+  color: #51a995;
+}
+#menu li a:hover::after {
+  width: 100%;
+}
+
+/* Button Hover */
+#g-btn, #w-btn {
+  transition: all 0.3s ease;
+}
+#g-btn:hover, #w-btn:hover {
+  background: #3c8c7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Hero Section Enhancements */
+.hero-box {
+  animation: fadeInUp 1s ease-in-out;
+}
+.h-left h1 {
+  background: linear-gradient(90deg, #51a995, #1f4a40);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.search input {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Features Hover */
+.features .fe-box div {
+  transition: all 0.3s ease;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+.features .fe-box div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Jobs as Cards */
+.jobs .jList {
+  background: #fff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.jobs .jList:hover {
+  transform: translateY(-5px);
+  background: #f7faf9;
+}
+
+/* Team Cards */
+.team-container .f1-box {
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.team-container .f1-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #1f4a40, #15332b);
+}
+.top i {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.top i:hover {
+  background: #51a995;
+  transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

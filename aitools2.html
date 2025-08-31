@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools - JStack</title>
+  <link rel="stylesheet" href="aitools.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <!-- <header>
+    <div id="navbar" class="obj-width">
+      <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
+      <ul id="menu">
+        <li><a href="#move">Home</a></li>
+        <li><a href="#jobs-in-demand">Browse Jobs</a></li>
+        <li><a href="">Post Projects</a></li>
+        <li><a href="aitools.html" class="active">AI Tools</a></li>
+        <li><button id="w-btn">Join</button></li>
+      </ul>
+      <i id="bar" class='bx bx-menu'></i>
+    </div>
+  </header> -->
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2><i class='bx bx-bot'></i> AI Tools for Freelancers & Clients</h2>
+    <p>Generate professional proposals or project drafts in seconds with AI</p>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="tools-container">
+    <!-- Freelancer Proposal Generator -->
+    <div class="tool-card">
+      <i class='bx bx-briefcase'></i>
+      <h3>Freelancer Proposal Generator</h3>
+      <textarea id="freelancer-input" rows="4" placeholder="Enter project details here..."></textarea>
+      <button onclick="generateProposal()">Generate Proposal</button>
+      <div id="freelancer-output" class="output-box">Your proposal will appear here...</div>
+    </div>
+
+    <!-- Client Project Draft Generator -->
+    <div class="tool-card">
+      <i class='bx bx-file'></i>
+      <h3>Client Project Draft Generator</h3>
+      <textarea id="client-input" rows="4" placeholder="Enter your project idea..."></textarea>
+      <button onclick="generateProject()">Generate Project Draft</button>
+      <div id="client-output" class="output-box">Your project draft will appear here...</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="obj-width">
+      <div class="top">
+        <div>
+          <img class="logo" src="images/logo.png" alt="Logo">
+          <p>Search your desired jobs.</p>
+        </div>
+        <div>
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-twitter'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+          <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+      </div>
+      <div class="bottom">
+        <div>
+          <h3>Project</h3>
+          <a href="#">Changelog</a>
+          <a href="#">Status</a>
+          <a href="#">License</a>
+          <a href="#">All Versions</a>
+        </div>
+        <div>
+          <h3>Community</h3>
+          <a href="#">Github</a>
+          <a href="#">Issues</a>
+          <a href="#">Project</a>
+          <a href="#">Twitter</a>
+        </div>
+        <div>
+          <h3>Help</h3>
+          <a href="#">Support</a>
+          <a href="#">Troubleshooting</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div>
+          <h3>Others</h3>
+          <a href="#">Terms of Services</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">License</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function generateProposal() {
+      let input = document.getElementById("freelancer-input").value;
+      let output = document.getElementById("freelancer-output");
+      if (input.trim() === "") {
+        output.innerText = "⚠️ Please enter project details to generate a proposal.";
+        return;
+      }
+      output.innerText = "📄 Proposal:\nHello, I am interested in your project regarding '" + input +
+        "'. I have the necessary skills and experience to deliver high-quality results within your timeline. Looking forward to collaborating!";
+    }
+
+    function generateProject() {
+      let input = document.getElementById("client-input").value;
+      let output = document.getElementById("client-output");
+      if (input.trim() === "") {
+        output.innerText = "⚠️ Please enter project details to generate a draft.";
+        return;
+      }
+      output.innerText = "📄 Project Draft:\nWe are looking for a freelancer to help us with '" + input +
+        "'. The freelancer should have relevant expertise and be able to complete the task efficiently. More details will be provided upon discussion.";
+    }
+  </script>
+</body>
+
+</html>
