@@ -23,7 +23,7 @@ header {
 }
 
 #navbar .logo{
-  width: 120px;
+  width: 90px;
 }
 
 #menu{
@@ -190,3 +190,8 @@ footer .bottom a {
 footer .bottom a:hover {
   color: #22c55e;
 }
+
+
+#logoo{
+  width: 160px;
+  margin-bottom: 10px;}
